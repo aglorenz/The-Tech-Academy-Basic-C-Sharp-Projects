@@ -46,7 +46,8 @@ class Program
             }
             else
             {
-                Console.WriteLine("\nYour estimated total for shipping this package is: " + (sumDimensions * pkgWeight / 100).ToString("c2"));
+                // formatted with the Currency ("C") Format Specifier see
+                // https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings#the-currency-c-format-specifier                Console.WriteLine("\nYour estimated total for shipping this package is: " + (sumDimensions * pkgWeight / 100).ToString("C2"));
             }
 
         };
