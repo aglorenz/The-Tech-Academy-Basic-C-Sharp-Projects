@@ -38,16 +38,18 @@ class Program
             Console.Write("\nWhat is the package lenghth\n>> ");
             float pkgLength = float.Parse(Console.ReadLine());
 
+            // Sum the package dimensions
             float sumDimensions = pkgLength + pkgWidth + pkgHeight;
+            
             // If package too big, then print message and exit
             if (sumDimensions > 50)
             {
                 Console.WriteLine("\nPackage too big to be shipped via Package Express");
             }
-            else
-            {
+            else {
                 // formatted with the Currency ("C") Format Specifier see
-                // https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings#the-currency-c-format-specifier                Console.WriteLine("\nYour estimated total for shipping this package is: " + (sumDimensions * pkgWeight / 100).ToString("C2"));
+                // https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings#the-currency-c-format-specifier
+                Console.WriteLine("\nYour estimated total for shipping this package is: " + (sumDimensions * pkgWeight / 100).ToString("C2"));
             }
 
         };
