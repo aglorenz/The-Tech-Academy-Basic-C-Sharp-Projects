@@ -3,7 +3,7 @@
 //  Date:   12/06/2018
 //  Purpose: Demonstrate array and list population and indexing
 //           Bus Req'ts:  Create a array of strings, an array of integers, and a list of strings
-//                        As user for an index to each and display the corresponding element.
+//                        Ask user for an index to each and display the corresponding element.
 //                        If user enters a number that is out of range, display an error and move to the next.
 //           Assumption:  User may be confused by asking for a number between 0 and array size.  So subtract 1 from the number they enter for 
 //                        correct index to the array/list
