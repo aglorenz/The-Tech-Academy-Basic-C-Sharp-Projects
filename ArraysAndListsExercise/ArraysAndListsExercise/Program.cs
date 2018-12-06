@@ -5,7 +5,7 @@
 //           Bus Req'ts:  Create a array of strings, an array of integers, and a list of strings
 //                        Ask user for an index to each and display the corresponding element.
 //                        If user enters a number that is out of range, display an error and move to the next.
-//           Assumption:  User may be confused by asking for a number between 0 and array size.  So subtract 1 from the number they enter for 
+//           Assumption:  User may be confused by asking for a number between 0 and array size - 1.  So subtract 1 from the number they enter for 
 //                        correct index to the array/list
 using System;
 using System.Collections.Generic;
