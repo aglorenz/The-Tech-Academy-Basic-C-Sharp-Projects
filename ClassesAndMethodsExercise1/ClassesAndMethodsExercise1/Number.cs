@@ -1,7 +1,7 @@
 ﻿// My first class with 3 methods but no data types.
 namespace ClassesAndMethodsExercise1
 {
-    public class Number
+    public static class Number
     {
         // Add 150 to input parameter and return sum
         public static int Add150To(int addend)
@@ -23,9 +23,9 @@ namespace ClassesAndMethodsExercise1
 
         // declaring this here means I don't have to do something like
         // Number myNum = new Number(); in the main program.  I love this!
-        public Number()
-        {
-        }
+        //public Number()
+        //{
+        //}
 
     }
 }
