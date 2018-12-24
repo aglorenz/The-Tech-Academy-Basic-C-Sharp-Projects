@@ -10,10 +10,12 @@ namespace TwentyOneGameFollowAlong
     {
         static void Main(string[] args)
         {
+            //Pillars of Object Oriented Programming  Inheritance, PolywantacrackerMorphism,
+
             //TwentyOneGame game = new TwentyOneGame();
             //game.Players = new List<string>() { "Andy", "Bill", "Joe" };
 
-            //// Calling the method in the class you're inheriting from, you're are calling the superclass method.  
+            //// Calling the method in the class you're INHERITING from, you're are calling the superclass method.  
             //game.ListPlayers(); // Game in this instance is the superclass.
             //game.Play();
             //Console.ReadLine();
@@ -25,6 +27,11 @@ namespace TwentyOneGameFollowAlong
             //Card card = new Card { Face = "King", Suit = "Spades" }; 
             //card.Face = "King";
             //card.Suit = "Spades";
+
+            //List<Game> games = new List<Game>();
+            //TwentyOneGame game = new TwentyOneGame();  // Classic polymorphism.  One object TwentyOneGame, morphs into a higher order object. 
+            //Game game = new TwentyOneGame();  // Classic polymorphism.  One object TwentyOneGame, morphs into a higher order object. 
+            games.Add(game);
 
 
             Deck deck = new Deck();
