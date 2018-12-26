@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace InheritanceExercise1
 {
-    public class Employee : Person
+    public class Employee : Person // example of inheritance.  Employee INHERITS all properties and methods of Person
     {
-        public int Id { get; set; }
+        public int Id { get; set; } // Person class does not have access to Id
     }
 }
