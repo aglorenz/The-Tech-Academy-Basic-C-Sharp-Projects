@@ -6,13 +6,21 @@ using System.Threading.Tasks;
 
 namespace TwentyOneGameFollowAlong
 {
-    public class Game
+    public abstract class Game // Game is a *base* class AKA an abstract class.  An abstract class can never be instantiated. 
+                               // It can never be an object. It's only meant to be inherited from. We are never going to have an instance
+                               // of game.
     {
         public List<string> Players { get; set; }
         public string Name { get; set; }
         public string Dealer { get; set; }
 
-        public void ListPlayers()
+        public abstract void Play();  // abstract methods can only exist in an abstract class.  Abstract method contains no implementation.
+                                      // It almost looks like a property. Any class inheriting this class must implement this method.
+                                      // it's sort of a contract between the base and the inheriting class.  
+
+        // virtual means that this method get inherited by an inheriting class, but the inheriting class has the ability to override it.
+        // virtual methods have implementation but they can be overridden.
+        public virtual void ListPlayers()  
         {
             foreach (string player in Players)
             {

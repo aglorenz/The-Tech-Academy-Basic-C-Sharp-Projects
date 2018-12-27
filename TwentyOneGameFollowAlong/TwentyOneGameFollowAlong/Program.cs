@@ -10,7 +10,7 @@ namespace TwentyOneGameFollowAlong
     {
         static void Main(string[] args)
         {
-            //Pillars of Object Oriented Programming  Inheritance, PolywantacrackerMorphism,
+            //Pillars of Object Oriented Programming  Inheritance,  polymorphism, abstraction, encapsulation
 
             //TwentyOneGame game = new TwentyOneGame();
             //game.Players = new List<string>() { "Andy", "Bill", "Joe" };
@@ -30,20 +30,25 @@ namespace TwentyOneGameFollowAlong
 
             //List<Game> games = new List<Game>();
             //TwentyOneGame game = new TwentyOneGame();  // Classic polymorphism.  One object TwentyOneGame, morphs into a higher order object. 
-            //Game game = new TwentyOneGame();  // Classic polymorphism.  One object TwentyOneGame, morphs into a higher order object. 
-            games.Add(game);
+            //Game game = new TwentyOneGame();  // Classic polymorphism.  One object, TwentyOneGame, morphs into a higher order object, game. 
+            //games.Add(game);
+            //Game game = new Game();  // Can't do this now that Game is an abstract class (AKA base class)
 
-
-            Deck deck = new Deck();
-            deck.Shuffle(3);
-
-
-            foreach (Card card in deck.Cards)
-            {
-                Console.WriteLine(card.Face + " of " + card.Suit);
-            }
-            Console.WriteLine(deck.Cards.Count);
+            TwentyOneGame game = new TwentyOneGame();
+            game.Players = new List<string>() { "Andy", "Bill", "Bob" };
+            game.ListPlayers();
             Console.ReadLine();
+
+            //Deck deck = new Deck();
+            //deck.Shuffle(3);
+
+
+            //foreach (Card card in deck.Cards)
+            //{
+            //    Console.WriteLine(card.Face + " of " + card.Suit);
+            //}
+            //Console.WriteLine(deck.Cards.Count);
+            //Console.ReadLine();
         }
 
     }
