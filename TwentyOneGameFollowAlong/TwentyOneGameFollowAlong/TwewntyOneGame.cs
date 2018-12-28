@@ -6,16 +6,25 @@ using System.Threading.Tasks;
 
 namespace TwentyOneGameFollowAlong
 {
-    public class TwentyOneGame : Game
+    // A class can inherit only one base class (Game).  But can inherit as many interfaces as necessary 
+    public class TwentyOneGame : Game, IWalkAway
 
-    {   // In order to implement Play (an abstract method) in the inherited class, simply do the method the same way (public,void, Play()) 
-        // but use override keyword. This satisfies the contract that we will define this method here. 
+    {   // In order to implement Play (an abstract method) in the inherited class, simply do the method the same 
+        // way (public,void, Play()) but use override keyword. This satisfies the contract that we will define 
+        // this method here. 
         public override void Play()  
         {
-            throw new NotImplementedException();  // Put in a catch to show that the method has not been implemented yet.
+            // Put in a catch to show that the method has not been implemented yet.
+            throw new NotImplementedException();  
         }
 
-        public override void ListPlayers() // overriding ListPlayers implementation in the Class Game.  Customize by writing out a header
+        public void WalkAway(Player player)
+        {
+            throw new NotImplementedException();
+        }
+
+        // overriding ListPlayers implementation in the Class Game.  Customize by writing out a header
+        public override void ListPlayers() 
         {
             Console.WriteLine("21 Players:");
             base.ListPlayers();
