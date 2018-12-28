@@ -32,23 +32,33 @@ namespace TwentyOneGameFollowAlong
             //TwentyOneGame game = new TwentyOneGame();  // Classic polymorphism.  One object TwentyOneGame, morphs into a higher order object. 
             //Game game = new TwentyOneGame();  // Classic polymorphism.  One object, TwentyOneGame, morphs into a higher order object, game. 
             //games.Add(game);
-            //Game game = new Game();  // Can't do this now that Game is an abstract class (AKA base class)
+            //Game game = new Game();  // Can't instantiate now that Game is an abstract class 
+            // a base class is AKA  parent or superclass class
+            // a child class is AKA subclass or derived class
 
-            TwentyOneGame game = new TwentyOneGame();
-            game.Players = new List<string>() { "Andy", "Bill", "Bob" };
-            game.ListPlayers();
-            Console.ReadLine();
-
-            //Deck deck = new Deck();
-            //deck.Shuffle(3);
-
-
-            //foreach (Card card in deck.Cards)
-            //{
-            //    Console.WriteLine(card.Face + " of " + card.Suit);
-            //}
-            //Console.WriteLine(deck.Cards.Count);
+            //TwentyOneGame game = new TwentyOneGame();
+            //game.Players = new List<string>() { "Andy", "Bill", "Bob" };
+            //game.ListPlayers();
             //Console.ReadLine();
+
+
+            Game game = new TwentyOneGame();
+            game.Players = new List<Player>(); // workaround to create empty list so we can add players to it.
+            Player player = new Player();
+            player.Name = "Andy";
+            game += player;
+            game -= player;
+
+            Deck deck = new Deck();
+            deck.Shuffle(3);
+
+
+            foreach (Card card in deck.Cards)
+            {
+                Console.WriteLine(card.Face + " of " + card.Suit);
+            }
+            Console.WriteLine(deck.Cards.Count);
+            Console.ReadLine();
         }
 
     }
