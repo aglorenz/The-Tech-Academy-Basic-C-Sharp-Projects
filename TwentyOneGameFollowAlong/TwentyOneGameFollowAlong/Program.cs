@@ -42,13 +42,15 @@ namespace TwentyOneGameFollowAlong
             //Console.ReadLine();
 
 
-            Game game = new TwentyOneGame();
-            game.Players = new List<Player>(); // workaround to create empty list so we can add players to it.
-            Player player = new Player();
-            player.Name = "Andy";
-            game += player;
-            game -= player;
+            //Game game = new TwentyOneGame();
+            //game.Players = new List<Player>(); // workaround to create empty list so we can add players to it.
+            //Player player = new Player();
+            //player.Name = "Andy";
+            //game += player;
+            //game -= player;
 
+            Player<Card> player = new Player<Card>();
+            player.Hand = new List<Card>();
             Deck deck = new Deck();
             deck.Shuffle(3);
 

@@ -10,7 +10,7 @@ namespace TwentyOneGameFollowAlong
                                // It can never be an object. It's only meant to be inherited from. We are never going to have an instance
                                // of game.
     {
-        public List<Player> Players { get; set; }
+        //public List<Player> Players { get; set; }
         public string Name { get; set; }
         public string Dealer { get; set; }
 
@@ -20,13 +20,13 @@ namespace TwentyOneGameFollowAlong
 
         // virtual means that this method get inherited by an inheriting class, but the inheriting class has the ability to override it.
         // virtual methods have implementation but they can be overridden.
-        public virtual void ListPlayers()  
-        {
-            foreach (Player player in Players)
-            {
-                Console.WriteLine(player.Name);
-            }
-        }
+        //public virtual void ListPlayers()  
+        //{
+        //    foreach (Player player in Players)
+        //    {
+        //        Console.WriteLine(player.Name);
+        //    }
+        //}
 
 
 
