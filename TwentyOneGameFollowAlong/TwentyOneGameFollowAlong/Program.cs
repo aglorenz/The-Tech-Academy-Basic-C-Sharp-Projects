@@ -49,11 +49,20 @@ namespace TwentyOneGameFollowAlong
             //game += player;
             //game -= player;
 
-            Player<Card> player = new Player<Card>();
-            player.Hand = new List<Card>();
+            // Enums limit the possible values you can receive from a user.  Great for drop down lists
+            // Eliminates user entry error.
+            // ConsoleColor color = ConsoleColor.Magenta;
+
+            //Card card = new Card();
+            //card.Suit = Suit.Clubs;
+
+            // enums have underlying data type of int assigned in order as as 1,2,3, etc 
+            // (or you can assign them manually -- see Card())
+            //int underlyingValue = (int)Suit.Diamonds;  //Casting a string to an integer instead of using Convert.ToInt32()
+            //Console.WriteLine(underlyingValue);  // will write the value 10 (see Card() class)
+
             Deck deck = new Deck();
             deck.Shuffle(3);
-
 
             foreach (Card card in deck.Cards)
             {
@@ -62,6 +71,6 @@ namespace TwentyOneGameFollowAlong
             Console.WriteLine(deck.Cards.Count);
             Console.ReadLine();
         }
-
+        
     }
 }

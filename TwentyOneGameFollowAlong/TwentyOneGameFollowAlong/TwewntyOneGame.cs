@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace TwentyOneGameFollowAlong
 {
     // A class can inherit only one base class (Game).  But can inherit as many interfaces as necessary 
-    public class TwentyOneGame : Game//, IWalkAway
+    public class TwentyOneGame : Game, IWalkAway
 
     {   public override void Play()
         {
@@ -24,16 +24,16 @@ namespace TwentyOneGameFollowAlong
         //    //throw new NotImplementedException();  
         //}
 
-        //public void WalkAway(Player player)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
         //// overriding ListPlayers implementation in the Class Game.  Customize by writing out a header
-        //public override void ListPlayers() 
-        //{
-        //    Console.WriteLine("21 Players:");
-        //    base.ListPlayers();
-        //}
+        public override void ListPlayers()
+        {
+            Console.WriteLine("21 Players:");
+            base.ListPlayers();
+        }
+
+        public void WalkAway(Player player)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
