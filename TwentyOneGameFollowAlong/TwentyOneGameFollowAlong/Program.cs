@@ -61,14 +61,30 @@ namespace TwentyOneGameFollowAlong
             //int underlyingValue = (int)Suit.Diamonds;  //Casting a string to an integer instead of using Convert.ToInt32()
             //Console.WriteLine(underlyingValue);  // will write the value 10 (see Card() class)
 
-            Deck deck = new Deck();
-            deck.Shuffle(3);
+            // Every data type in C# is either a reference type (pointer) or a value (a copy of) type and these two types have 
+            //different behavior
 
-            foreach (Card card in deck.Cards)
-            {
-                Console.WriteLine(card.Face + " of " + card.Suit);
-            }
-            Console.WriteLine(deck.Cards.Count);
+            // built in value types are integer, enum, boolean, datetime .  What is an integer if it's not a class?
+            // value types can't have a value of null i.e., non-nullable
+            //int number = 5;  //its a struct.  A struct is a value type that can't be inherited
+            //bool isTrue = null; // non-nullable
+            Card card1 = new Card();
+            Card card2 = card1;  // Class e.g., Card is a reference type;  card2 is pointing to memory for card1
+            card1.Face = Face.Eight;
+            card2.Face = Face.King;
+
+
+
+            Console.WriteLine(card1.Face);  // If Card is a struct, answer is Eight, if Card is a Class ans is King
+
+            //Deck deck = new Deck();
+            //deck.Shuffle(3);
+
+            //foreach (Card card in deck.Cards)
+            //{
+            //    Console.WriteLine(card.Face + " of " + card.Suit);
+            //}
+            //Console.WriteLine(deck.Cards.Count);
             Console.ReadLine();
         }
         
