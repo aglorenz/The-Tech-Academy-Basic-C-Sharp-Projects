@@ -46,9 +46,12 @@ namespace TwentyOneGameFollowAlong
             //game.Players = new List<Player>(); // workaround to create empty list so we can add players to it.
             //Player player = new Player();
             //player.Name = "Andy";
+
+            // ***************** Operator Overload
             //game += player;
             //game -= player;
 
+            //****************** Enums
             // Enums limit the possible values you can receive from a user.  Great for drop down lists
             // Eliminates user entry error.
             // ConsoleColor color = ConsoleColor.Magenta;
@@ -61,6 +64,7 @@ namespace TwentyOneGameFollowAlong
             //int underlyingValue = (int)Suit.Diamonds;  //Casting a string to an integer instead of using Convert.ToInt32()
             //Console.WriteLine(underlyingValue);  // will write the value 10 (see Card() class)
 
+            //******************* Struct  - reference or value data type?
             // Every data type in C# is either a reference type (pointer) or a value (a copy of) type and these two types have 
             //different behavior
 
@@ -68,16 +72,38 @@ namespace TwentyOneGameFollowAlong
             // value types can't have a value of null i.e., non-nullable
             //int number = 5;  //its a struct.  A struct is a value type that can't be inherited
             //bool isTrue = null; // non-nullable
-            Card card1 = new Card();
-            Card card2 = card1;  // Class e.g., Card is a reference type;  card2 is pointing to memory for card1
-            card1.Face = Face.Eight;
-            card2.Face = Face.King;
+            //Card card1 = new Card();
+            //Card card2 = card1; // if Card is a Class, it is a reference type; card2 points to memory loc of card1  
+            // if Card is a struct, its a value type;  card2 has its own memory location
+
+            //card1.Face = Face.Eight;
+            //card2.Face = Face.King;
+
+            //Console.WriteLine(card1.Face);  // If Card is a struct, answer is Eight, if Card is a Class ans is King
+
+            // Lambda functions expose lists to a variety of handy methods to make life much easier
+            // how many ACES are in the loop?
+            Deck deck = new Deck();
+
+            //int count = deck.Cards.Count(x => x.Face == Face.Ace); 
+
+            // Create a new list of just Kings
+            //List<Card> newList = deck.Cards.Where(x => x.Face == Face.King).ToList();
+            //foreach (Card card in newList)
+            //{
+            //    Console.WriteLine("{0} of {1}",card.Face, card.Suit);
+            //}
+
+            List<int> numberList = new List<int> { 1, 2, 3, 535, 342, 23 };
+
+            //int sum = numberList.Sum(x => x + 5 );
+            int max = numberList.Max(); // Saves so much time and makes it more fun
+            // chain methods together
+            int sum = numberList.Where(x => x > 20).Sum(); // create new list of num where value > 20 then sum it.
 
 
+            Console.WriteLine(sum);
 
-            Console.WriteLine(card1.Face);  // If Card is a struct, answer is Eight, if Card is a Class ans is King
-
-            //Deck deck = new Deck();
             //deck.Shuffle(3);
 
             //foreach (Card card in deck.Cards)
