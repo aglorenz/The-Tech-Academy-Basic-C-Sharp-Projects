@@ -15,7 +15,9 @@ namespace DateTimeExercise
         static void Main(string[] args)
         {
             // Print the current date and time to the console
-            DateTime date = DateTime.Now;
+            DateTime date =  DateTime.Now;
+            
+            
             Console.WriteLine("\nThe curent date and time is {0}", date);
 
             // Query the user for a number
