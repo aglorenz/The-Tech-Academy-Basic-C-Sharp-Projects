@@ -46,7 +46,7 @@ namespace EnumsExercise
                 DaysOfWeek day = (DaysOfWeek)Enum.Parse(typeof(DaysOfWeek), dayString);
 
                 Console.WriteLine("\nYou entered {0}", day);
-                Console.WriteLine("It's integer equivalent is {0}", (int)day);
+                //Console.WriteLine("It's integer equivalent is {0}", (int)day);
                 Console.ReadLine();
 
                 //Console.WriteLine(Enum.Parse(typeof(DaysOfWeek), dayString));
