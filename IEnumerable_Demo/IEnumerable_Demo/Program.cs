@@ -7,6 +7,7 @@ namespace IEnumerable_Demo
     {
         static void Main(string[] args)
         {
+            // from: https://james-ramsden.com/implement-ienumerable-c/
             IEnums myList = new IEnums();
             List<double> rtnList = new List<double>();
             

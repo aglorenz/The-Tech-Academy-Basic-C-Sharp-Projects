@@ -31,7 +31,7 @@ namespace IEnumerable_Demo
             }
         }
 
-        //This method is also needed, but usually you don't need to change it from this.
+        //This method is also needed (to be compatible with the ICollection Interface), but usually you don't need to change it from this.
         IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();
